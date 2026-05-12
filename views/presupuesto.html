@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto | CubiertasChueca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    >
+    <!-- hoja de estilos del proyecto -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <!-- Menú de navegación fijo -->
+    <header>
+      <ul class="menu">
+        <li>
+          <a href="/index.html">
+            <img
+              class="LOGO1"
+              src="../images/roof-svgrepo-com.png"
+              alt="Logo CubiertasChueca"
+              width="40"
+              height="40"
+            >
+          </a>
+        </li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a class="activo" href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <h1>Solicitar presupuesto</h1>
+
+      <!-- Layout principal: formulario izquierda + panel presupuesto derecha -->
+      <section class="presupuesto__layout">
+        <h2 style="display: none">Formulario de presupuesto</h2>
+
+        <!-- Columna izquierda: formulario de contacto y opciones -->
+        <section>
+          <h2 style="display: none">Datos del formulario</h2>
+
+          <!-- Parte 1: Datos de contacto -->
+          <fieldset class="form-card">
+            <legend class="form-card__legend">1. Datos de contacto</legend>
+
+            <!-- Nombre: solo letras, máximo 15 caracteres -->
+            <p class="form-group">
+              <label for="nombre">Nombre *</label>
+              <input
+                type="text"
+                id="nombre"
+                placeholder="Tu nombre"
+                maxlength="15"
+              >
+              <span class="msg-error" id="err-nombre">
+                Solo letras, máximo 15 caracteres.
+              </span>
+            </p>
+
+            <!-- Apellidos: solo letras, máximo 40 caracteres -->
+            <p class="form-group">
+              <label for="apellidos">Apellidos *</label>
+              <input
+                type="text"
+                id="apellidos"
+                placeholder="Tus apellidos"
+                maxlength="40"
+              >
+              <span class="msg-error" id="err-apellidos">
+                Solo letras, máximo 40 caracteres.
+              </span>
+            </p>
+
+            <!-- Teléfono: solo números, máximo 9 dígitos -->
+            <p class="form-group">
+              <label for="telefono">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                placeholder="600000000"
+                maxlength="9"
+              >
+              <span class="msg-error" id="err-telefono">
+                Solo números, máximo 9 dígitos.
+              </span>
+            </p>
+
+            <!-- Email: formato estándar usuario@dominio.ext -->
+            <p class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" placeholder="ejemplo@correo.com">
+              <span class="msg-error" id="err-email">
+                Introduce un correo válido (ejemplo@dominio.com).
+              </span>
+            </p>
+          </fieldset>
+
+          <!-- Parte 2: Configurar el presupuesto -->
+          <fieldset class="form-card" style="margin-top: 20px">
+            <legend class="form-card__legend">2. Configurar presupuesto</legend>
+
+            <!-- Producto: select con mínimo 3 opciones con precio asociado -->
+            <p class="form-group">
+              <label for="producto">Tipo de cubierta *</label>
+              <select id="producto">
+                <option value="">— Selecciona una opción —</option>
+                <option value="pizarra">Cubierta de pizarra natural — 5.500 €</option>
+                <option value="zinc">Cubierta de zinc — 8.200 €</option>
+                <option value="ceramica">Cubierta de teja cerámica — 4.800 €</option>
+                <option value="cobre">Cubierta de cobre — 9.600 €</option>
+                <option value="grava">Impermeabilización con grava — 3.200 €</option>
+              </select>
+            </p>
+
+            <!-- Plazo en meses: afecta al descuento final -->
+            <p class="form-group">
+              <label for="plazo">Plazo en meses *</label>
+              <input type="number" id="plazo" min="1" max="24" value="3">
+              <span class="plazo-nota">
+                +3 meses → 5% dto. | +6 meses → 10% dto. | menos de 1 mes → 15% recargo
+              </span>
+            </p>
+
+            <!-- Extras: checkboxes, cada uno suma al presupuesto final -->
+            <div class="form-group">
+              <label>Extras opcionales</label>
+              <fieldset class="extras-grid">
+                <legend class="sr-only">Selecciona los extras que deseas añadir</legend>
+                <label class="extra-item">
+                  <input type="checkbox" class="extra-check" value="limpieza">
+                  Limpieza de cubierta
+                  <span class="extra-precio">+350 €</span>
+                </label>
+                <label class="extra-item">
+                  <input type="checkbox" class="extra-check" value="canalon">
+                  Canalones nuevos
+                  <span class="extra-precio">+480 €</span>
+                </label>
+                <label class="extra-item">
+                  <input type="checkbox" class="extra-check" value="lucernario">
+                  Lucernario
+                  <span class="extra-precio">+1.200 €</span>
+                </label>
+                <label class="extra-item">
+                  <input type="checkbox" class="extra-check" value="aislamiento">
+                  Aislamiento térmico
+                  <span class="extra-precio">+680 €</span>
+                </label>
+              </fieldset>
+            </div>
+
+            <!-- Aceptación de condiciones -->
+            <p class="condiciones-row">
+              <input type="checkbox" id="condiciones">
+              <label for="condiciones">
+                He leído y acepto la <a href="#">política de privacidad</a> *
+              </label>
+            </p>
+
+            <!-- Botones de enviar y resetear -->
+            <p class="botones-form">
+              <button type="button" class="btn-enviar" id="btn-enviar">
+                Enviar solicitud
+              </button>
+              <button type="button" class="btn-reset" id="btn-reset">
+                Resetear
+              </button>
+            </p>
+
+            <!-- Mensaje de confirmación (oculto hasta que se envía) -->
+            <p id="msg-confirmacion">
+              ✓ Solicitud enviada. Nos pondremos en contacto en menos de 24 horas.
+            </p>
+          </fieldset>
+        </section>
+
+        <!-- Columna derecha: panel con el presupuesto en tiempo real -->
+        <aside class="presupuesto-panel">
+          <section class="form-card">
+            <h2>Presupuesto estimado</h2>
+            <p style="font-size: 13px; color: #888; margin-bottom: 12px">
+              Se actualiza con cada cambio que realizas.
+            </p>
+
+            <!-- Desglose de líneas del presupuesto -->
+            <ul class="presupuesto-desglose">
+              <li>
+                <span>Producto</span>
+                <span id="sp-producto">—</span>
+              </li>
+              <li>
+                <span>Extras</span>
+                <span id="sp-extras">0 €</span>
+              </li>
+              <!-- Fila de descuento: se muestra u oculta con JS según el plazo -->
+              <li id="li-descuento" style="display: none">
+                <span>Descuento/recargo plazo</span>
+                <span id="sp-descuento"></span>
+              </li>
+            </ul>
+
+            <!-- Nota explicativa del plazo (se rellena con JS) -->
+            <p class="plazo-nota" id="nota-plazo-panel"></p>
+
+            <!-- Total final -->
+            <p class="presupuesto-total">
+              <span class="total-label">Total estimado</span>
+              <span class="total-valor" id="sp-total">0 €</span>
+            </p>
+
+            <p style="font-size: 12px; color: #aaa; margin-top: 12px">
+              * Precio orientativo para 100 m². El precio final se confirma tras
+              visita técnica gratuita.
+            </p>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <section>
+        <h2 style="display: none">Pie de página</h2>
+        <h3 style="display: none">Redes</h3>
+        <h4>Redes sociales</h4>
+        <nav class="footer-redes" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="../images/logo-facebook-svgrepo-com.png" alt="Facebook" width="28" height="28">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="../images/Instagram.png" alt="Instagram" width="28" height="28">
+          </a>
+          <a href="https://www.whatsapp.com/" target="_blank">
+            <img src="../images/logo-whatsapp-svgrepo-com.png" alt="WhatsApp" width="28" height="28">
+          </a>
+        </nav>
+      </section>
+      <section>
+        <h4>Contacto</h4>
+        <address>
+          <p>C/ Sorbesopas Nº 20, Alcorcón 28921</p>
+          <p>Tel: 600 000 000</p>
+        </address>
+      </section>
+      <div class="footer-aviso">
+        <p>
+          &copy; <span id="footer-year"></span> CubiertasChueca. Todos los
+          derechos reservados.
+        </p>
+        <p><a href="#">Aviso legal</a></p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/presupuesto.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "categoria": "Materiales",
+    "titulo": "La pizarra natural española lidera las exportaciones europeas de materiales de cubierta",
+    "descripcion": "España sigue siendo el mayor productor mundial de pizarra natural para cubiertas. Las canteras de Galicia y Castilla y León exportaron más de 400.000 toneladas en 2025, con Francia y Alemania como principales destinos. Su durabilidad superior a 100 años y su resistencia al hielo y al fuego la convierten en la opción preferida para rehabilitación de edificios históricos.",
+    "fecha": "14 de abril de 2026"
+  },
+  {
+    "id": 2,
+    "categoria": "Innovación",
+    "titulo": "Nuevas membranas líquidas de poliurea: impermeabilización en frío sin juntas",
+    "descripcion": "Los sistemas de impermeabilización con poliurea aplicada en frío están ganando terreno frente a los sistemas tradicionales de láminas asfálticas. Su aplicación mediante pistola forma una membrana continua sin juntas, con una vida útil estimada de más de 25 años y total resistencia a la intemperie, UV y cambios extremos de temperatura. Cada vez más instaladores en Madrid incorporan esta técnica.",
+    "fecha": "8 de abril de 2026"
+  },
+  {
+    "id": 3,
+    "categoria": "Normativa",
+    "titulo": "El CTE actualiza los requisitos de aislamiento en cubiertas inclinadas para 2026",
+    "descripcion": "El Código Técnico de la Edificación (DB-HE) introduce nuevos valores mínimos de transmitancia térmica para cubiertas inclinadas y planas en obra nueva y gran rehabilitación. Los profesionales del sector deberán adaptar sus proyectos a una resistencia térmica mínima de R=4,0 m²K/W en la zona climática de Madrid, lo que implica espesores de aislamiento superiores a los habituales.",
+    "fecha": "1 de abril de 2026"
+  },
+  {
+    "id": 4,
+    "categoria": "Materiales",
+    "titulo": "El zinc titanio: el material de cubierta con mayor crecimiento en obra nueva de lujo",
+    "descripcion": "El zinc titanio pre-patinado se ha convertido en el material estrella de los proyectos residenciales de alto standing en Madrid y Barcelona. Su acabado natural en gris antracita o azul-gris, su peso reducido (menos de 6 kg/m²) y su vida útil de entre 80 y 100 años lo hacen especialmente atractivo para arquitectos e inversores. Los talleres especializados como el nuestro trabajan con chapas de 0,7 mm en formato standing seam.",
+    "fecha": "25 de marzo de 2026"
+  }
+]

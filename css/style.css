@@ -1,0 +1,795 @@
+/* ============================================================
+   style.css — HOJA DE ESTILOS ÚNICA del proyecto
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body con flexbox: garantiza que el footer quede siempre al pie */
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   MENÚ DE NAVEGACIÓN FIJO
+   ============================================================ */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a2e;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 20px;
+  height: 60px;
+  z-index: 999;
+  gap: 10px;
+}
+
+.menu li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.menu li a.loguito {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.menu li a:hover {
+  background-color: #e94560;
+}
+
+.menu li a.activo {
+  background-color: #e94560;
+}
+
+.LOGO1 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  margin-right: 10px;
+}
+
+/* flex: 1 hace que el main ocupe todo el espacio sobrante,
+   empujando el footer hacia abajo */
+main {
+  padding-top: 70px;
+  flex: 1;
+}
+
+/* ============================================================
+   FOOTER — siempre al pie gracias a flex en body
+   ============================================================ */
+footer {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+footer h4 {
+  color: #e94560;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+footer p,
+footer address {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-redes a img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+}
+
+.footer-redes a img:hover {
+  opacity: 1;
+}
+
+.footer-aviso {
+  width: 100%;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-aviso a {
+  color: #e94560;
+}
+
+nav.footer-redes {
+  padding-top: 10%;
+  display: grid;
+  align-content: center;
+  justify-content: space-around;
+}
+
+nav.navegacion li {
+  margin-top: 20%;
+}
+
+/* ============================================================
+   H1 GENERAL
+   ============================================================ */
+h1 {
+  text-align: center;
+  padding: 30px 20px 10px;
+  font-size: 26px;
+  color: #1a1a2e;
+}
+
+/* ============================================================
+   ESTILOS PÁGINA DE INICIO
+    con .pagina-inicio para no afectar otras páginas.
+   En index.html el <main> tiene class="pagina-inicio".
+   ============================================================ */
+.pagina-inicio section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #e94560;
+}
+
+.pagina-inicio section h2 {
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pagina-inicio section p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.pagina-inicio section .foto {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Lista de características en cada servicio del inicio */
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lista-caracteristicas li {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #444;
+  border-left: 3px solid #e94560;
+}
+
+/* Sección de valores */
+#cualidades {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+#cualidades li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+}
+
+#cualidades li h3 {
+  font-size: 16px;
+  color: #e94560;
+  margin-bottom: 10px;
+}
+
+#cualidades li p {
+  font-size: 13px;
+  color: #555;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 5%;
+  filter: invert(10%) sepia(20%) saturate(900%) hue-rotate(200deg)
+    brightness(30%) contrast(110%);
+}
+
+/* Noticias cargadas con AJAX */
+#noticias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 20px 20px;
+}
+
+.noticia-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-left: 4px solid #e94560;
+  border-radius: 6px;
+  padding: 16px;
+  flex: 1 1 260px;
+}
+
+.noticia-card span {
+  font-size: 12px;
+  color: #e94560;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.noticia-card h3 {
+  font-size: 15px;
+  color: #1a1a2e;
+  margin: 6px 0;
+}
+
+.noticia-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.noticia-card .fecha {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+#noticias-loading {
+  padding: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ============================================================
+   ESTILOS GALERÍA
+   ============================================================ */
+#galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.galeria__item {
+  width: 280px;
+  height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  position: relative;
+}
+
+.galeria__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.galeria__item:hover {
+  border-color: #e94560;
+  opacity: 0.9;
+}
+
+.galeria__item__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px;
+  font-size: 13px;
+  text-align: center;
+  display: none;
+}
+
+.galeria__item:hover .galeria__item__overlay {
+  display: block;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.88);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.activo {
+  display: flex;
+}
+
+.lightbox__contenido {
+  position: relative;
+  text-align: center;
+}
+
+.lightbox__img {
+  max-width: 85vw;
+  max-height: 80vh;
+  border-radius: 4px;
+}
+
+.lightbox__caption {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.lightbox__contador {
+  color: #888;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.lightbox__cerrar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.lightbox__nav--prev { left: -55px; }
+.lightbox__nav--next { right: -55px; }
+
+.lightbox__nav:hover {
+  background-color: #e94560;
+}
+
+/* ============================================================
+   ESTILOS PRESUPUESTO
+   ============================================================ */
+.presupuesto__layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 40px;
+  align-items: flex-start;
+}
+
+.form-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  flex: 1 1 380px;
+}
+
+.form-card h2 {
+  color: #e94560;
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-card__legend {
+  color: #e94560;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 4px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.form-group input.error {
+  border-color: red;
+}
+
+.msg-error {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.msg-error.visible {
+  display: block;
+}
+
+.extras-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+  border: none;
+  padding: 0;
+}
+
+.extra-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.extra-item .extra-precio {
+  margin-left: auto;
+  color: #888;
+  font-size: 13px;
+}
+
+.presupuesto-panel {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 70px;
+}
+
+.presupuesto-desglose {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.presupuesto-desglose li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #eee;
+  font-size: 14px;
+  color: #555;
+}
+
+.presupuesto-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+.total-label {
+  font-size: 15px;
+  color: #1a1a2e;
+}
+
+.total-valor {
+  font-size: 28px;
+  color: #e94560;
+}
+
+.plazo-nota {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.condiciones-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 14px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.condiciones-row input {
+  margin-top: 2px;
+  width: auto;
+}
+
+.condiciones-row a {
+  color: #e94560;
+}
+
+.botones-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-enviar {
+  background-color: #e94560;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #c73652;
+}
+
+.btn-reset {
+  background-color: transparent;
+  color: #888;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  border-color: #333;
+  color: #333;
+}
+
+#msg-confirmacion {
+  display: none;
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 4px;
+  color: #2e7d32;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ============================================================
+   ESTILOS CONTACTO
+   ============================================================ */
+.contacto__layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 40px;
+  align-items: flex-start;
+}
+
+#mapa {
+  flex: 1 1 400px;
+  height: 440px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.contacto-info {
+  flex: 0 0 280px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.contacto-info h2 {
+  color: #e94560;
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.contacto-info__item {
+  margin-bottom: 16px;
+}
+
+.contacto-info__item h3 {
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contacto-info__item p,
+.contacto-info__item a {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.contacto-info__item a:hover {
+  color: #e94560;
+}
+
+.ruta-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.ruta-section h3 {
+  font-size: 14px;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.ruta-section p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.ruta-section input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.ruta-section input:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.btn-ruta {
+  width: 100%;
+  background-color: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 9px;
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-ruta:hover {
+  background-color: #e94560;
+}
+
+#info-ruta {
+  display: none;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #2e7d32;
+}
+
+#geo-estado {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.horario-table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.horario-table td {
+  padding: 5px 0;
+  border-bottom: 1px dashed #eee;
+  color: #555;
+}
+
+.horario-table td:last-child {
+  text-align: right;
+  color: #888;
+}
+
+/* Texto oculto visualmente pero accesible para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | CubiertasChueca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Leaflet CSS para el mapa dinámico con OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- hoja de estilos del proyecto -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <!-- Menú de navegación fijo -->
+    <header>
+      <ul class="menu">
+        <li>
+          <a href="/index.html">
+            <img
+              class="LOGO1"
+              src="../images/roof-svgrepo-com.png"
+              alt="Logo CubiertasChueca"
+              width="40"
+              height="40"
+            >
+          </a>
+        </li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a class="activo" href="contacto.html">Contacto</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <h1>Contacto y ubicación</h1>
+
+      <!-- Layout: mapa izquierda + datos de contacto derecha -->
+      <section class="contacto__layout">
+        <h2 style="display: none">Mapa y datos de contacto</h2>
+
+        <!-- Mapa dinámico — Leaflet necesita un elemento con id="mapa" -->
+        <figure id="mapa" aria-label="Mapa de ubicación de CubiertasChueca en Alcorcón"></figure>
+
+        <!-- Datos de contacto de la empresa -->
+        <aside class="contacto-info">
+          <h2>Datos de contacto</h2>
+
+          <!-- Dirección -->
+          <section class="contacto-info__item">
+            <h3>Dirección</h3>
+            <address>
+              <p>C/ Sorbesopas Nº 20<br>Alcorcón, Madrid 28921</p>
+            </address>
+          </section>
+
+          <!-- Teléfono -->
+          <section class="contacto-info__item">
+            <h3>Teléfono</h3>
+            <p><a href="tel:+34600000000">600 000 000</a></p>
+          </section>
+
+          <!-- Email -->
+          <section class="contacto-info__item">
+            <h3>Email</h3>
+            <p><a href="mailto:info@cubiertaschueca.es">info@cubiertaschueca.es</a></p>
+          </section>
+
+          <!-- Horario de atención -->
+          <table class="horario-table">
+            <caption>Horario de atención</caption>
+            <tbody>
+              <tr><td>Lunes — Viernes</td><td>08:00 — 18:00</td></tr>
+              <tr><td>Sábados</td><td>09:00 — 14:00</td></tr>
+              <tr><td>Domingos</td><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+
+          <!-- Sección de ruta -->
+          <!-- La ruta se calcula automáticamente al cargar la página con geolocalización.
+               Si el usuario deniega el permiso, puede introducir la dirección manualmente. -->
+          <section class="ruta-section">
+            <h3>¿Cómo llegar?</h3>
+            <!-- Mensaje de estado de la geolocalización automática -->
+            <p id="geo-estado">Obteniendo tu ubicación automáticamente...</p>
+            <p>O introduce tu dirección manualmente:</p>
+            <label for="direccion-cliente">Tu dirección</label>
+            <input
+              type="text"
+              id="direccion-cliente"
+              placeholder="Ej: Calle Mayor 10, Madrid"
+            >
+            <button type="button" class="btn-ruta" id="btn-calcular-ruta">
+              Calcular ruta
+            </button>
+            <!-- Resultado de la ruta: distancia y tiempo (se rellena con JS) -->
+            <p id="info-ruta"></p>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <section>
+        <h4>Redes sociales</h4>
+        <nav class="footer-redes" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="../images/logo-facebook-svgrepo-com.png" alt="Facebook" width="28" height="28">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="../images/Instagram.png" alt="Instagram" width="28" height="28">
+          </a>
+          <a href="https://www.whatsapp.com/" target="_blank">
+            <img src="../images/logo-whatsapp-svgrepo-com.png" alt="WhatsApp" width="28" height="28">
+          </a>
+        </nav>
+      </section>
+      <section>
+        <h4>Contacto</h4>
+        <address>
+          <p>C/ Sorbesopas Nº 20, Alcorcón 28921</p>
+          <p>Tel: 600 000 000</p>
+        </address>
+      </section>
+      <div class="footer-aviso">
+        <p>
+          &copy; <span id="footer-year"></span> CubiertasChueca. Todos los
+          derechos reservados.
+        </p>
+        <p><a href="#">Aviso legal</a></p>
+      </div>
+    </footer>
+
+    <!-- Leaflet JS para el mapa -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/contacto.js"></script>
+  </body>
+</html>

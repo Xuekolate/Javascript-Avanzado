@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | CubiertasChueca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    >
+    <!-- hoja de estilos del proyecto -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <!-- Menú de navegación fijo -->
+    <header>
+      <ul class="menu">
+        <li>
+          <a class="loguito" href="/index.html">
+            <img
+              class="LOGO1"
+              src="../images/roof-svgrepo-com.png"
+              alt="Logo CubiertasChueca"
+              width="40"
+              height="40"
+            >
+          </a>
+        </li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a class="activo" href="galeria.html">Galería</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <h1>Galería de trabajos</h1>
+
+      <!-- Grid de imágenes generado dinámicamente por galeria.js -->
+      <section id="galeria-grid" aria-label="Galería de trabajos realizados"></section>
+    </main>
+
+    <!-- Lightbox: ventana emergente para ver la imagen ampliada -->
+    <section
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Visor de imagen"
+    >
+      <figure class="lightbox__contenido">
+        <button class="lightbox__cerrar" id="lb-cerrar" aria-label="Cerrar">
+          &#x2715;
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Anterior">
+          &#8592;
+        </button>
+        <img
+          class="lightbox__img"
+          id="lb-img"
+          src="#"
+          alt="imagen ampliada"
+          width="800"
+          height="533"
+        >
+        <button class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Siguiente">
+          &#8594;
+        </button>
+        <figcaption class="lightbox__caption" id="lb-caption"></figcaption>
+      </figure>
+      <span class="lightbox__contador" id="lb-contador"></span>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <section>
+        <h2 style="display: none">Pie de página</h2>
+        <h3 style="display: none">Redes</h3>
+        <h4>Redes sociales</h4>
+        <nav class="footer-redes" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="../images/logo-facebook-svgrepo-com.png" alt="Facebook" width="28" height="28">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="../images/Instagram.png" alt="Instagram" width="28" height="28">
+          </a>
+          <a href="https://www.whatsapp.com/" target="_blank">
+            <img src="../images/logo-whatsapp-svgrepo-com.png" alt="WhatsApp" width="28" height="28">
+          </a>
+        </nav>
+      </section>
+      <section>
+        <h4>Contacto</h4>
+        <address>
+          <p>C/ Sorbesopas Nº 20, Alcorcón 28921</p>
+          <p>Tel: 600 000 000</p>
+        </address>
+      </section>
+      <div class="footer-aviso">
+        <p>
+          &copy; <span id="footer-year"></span> CubiertasChueca. Todos los
+          derechos reservados.
+        </p>
+        <p><a href="#">Aviso legal</a></p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/galeria.js"></script>
+  </body>
+</html>
